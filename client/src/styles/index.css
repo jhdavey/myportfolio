@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Edu+NSW+ACT+Foundation:wght@700&family=Nunito&family=Roboto&display=swap');
+
+body {
+background-image: url('../assets/portfolio_background.gif');
+background-size: cover;
+}
+
+h2 {
+  margin: 10px 0px 2px 0px;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+  color: white;
+}
+
+h3 {
+  font-style: italic;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  color: skyblue;
+}
+
+.font-nunito {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.prose img {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+/* Responsive layouts */
+/* Make intro header display as single center column with stacked elements*/
+/* @media screen and (max-width: 762px) {
+  .introemoji {
+    flex-direction: column;
+  }
+} */
