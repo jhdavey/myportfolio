@@ -3,9 +3,9 @@ import expressLogo from '../../assets/expressjs_logo.png';
 
 export default function Home() {
   return (
-    <main className='mt-15 sm:mt-2'>
+    <main>
       {/* Content section */}
-      <section className='relative flex flex-col sm:h-screen justify-center items-center sm:mt-2'>
+      <section className='flex flex-col sm:h-screen justify-center items-center'>
 
         {/* First row of section - image, intro, emoji */}  
         <div className='relative flex flex-col justify-center items-center'>
@@ -17,7 +17,7 @@ export default function Home() {
         </div>
 
         {/* Second row of section - title */}
-        <h2 className='text-center mx-2 text-4xl md:text-6xl text-sky-50 font-nunito mt-2'>Full-Stack Developer & Designer</h2>
+        <h2 className='text-center mx-2 text-4xl md:text-6xl text-sky-50 font-nunito mt-2'>Full-Stack Developer</h2>
 
         {/* Third row of section - techstack icons */}
         <div className='relative flex w-3/4 justify-center items-center'>

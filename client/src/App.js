@@ -19,7 +19,7 @@ function App() {
         <Route Component={Resume} path='/resume' />
         <Route Component={Contact} path='/contact' />
       </Routes>
-      <Footer />
+      <Footer/>
     </Router>
   );
 }
