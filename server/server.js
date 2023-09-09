@@ -19,6 +19,18 @@ app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
   });
 
+  app.get('/portfolio', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
+
+  app.get('/resume', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
+
+  app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  });
+
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}!`);
