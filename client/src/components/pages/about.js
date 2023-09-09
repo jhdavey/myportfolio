@@ -2,7 +2,7 @@ import mypic from '../../assets/wedding_Speech_strokedred.png';
 
 export default function About() {
   return (
-    <section className="relative flex flex-col h-screen justify-center items-center">
+    <section className="relative flex flex-col h-4/5 md:h-screen justify-center items-center">
 
       <div className="relative md:flex md:justify-center md:items-center bg-[#222634]/75 rounded-lg ring ring-indigo-200 ring-opacity-50 text-sky-50 rounded-lg py-5 w-2/3">
 

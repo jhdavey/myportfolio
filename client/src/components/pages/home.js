@@ -9,15 +9,15 @@ export default function Home() {
 
         {/* First row of section - image, intro, emoji */}  
         <div className='relative flex flex-col justify-center items-center'>
-          <img src={mypic} alt='giving speech at my wedding' className='w-24 h-24'/>
-          <h1 className='text-center text-6xl text-sky-50 font-nunito'>
+          <img src={mypic} alt='giving speech at my wedding' className='w-28 h-28'/>
+          <h1 className='text-center mt-2 mx-2 text-4xl md:text-6xl text-sky-50 font-nunito'>
             Hey, I'm Harley!
             <span className='block sm:inline'>&#128075;</span>
           </h1>
         </div>
 
         {/* Second row of section - title */}
-        <h2 className='text-center text-5xl text-sky-50 font-nunito mt-2'>Full-Stack Developer & Designer</h2>
+        <h2 className='text-center mx-2 text-4xl md:text-6xl text-sky-50 font-nunito mt-2'>Full-Stack Developer & Designer</h2>
 
         {/* Third row of section - techstack icons */}
         <div className='relative flex w-3/4 justify-center items-center'>

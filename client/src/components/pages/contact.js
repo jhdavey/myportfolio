@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden ">
-      <div className="w-full p-6 m-auto lg:max-w-xl">
+      <div className="w-full sm:w-3/4 p-6 m-auto lg:max-w-xl">
         <h1 className="text-3xl font-nunito text-center text-sky-50 uppercase">
           Contact Form
         </h1>
@@ -15,7 +15,7 @@ export default function Contact() {
                 className="
 
             w-full
-            block px-16 py-2 mt-2
+            block px-3 py-2 mt-2
             border-gray-600
             rounded-md
             shadow-sm
@@ -37,7 +37,7 @@ export default function Contact() {
                 className="
             block
             w-full
-            mt-2 px-16 py-2
+            mt-2 px-3 py-2
             border-gray-600
             rounded-md
             shadow-sm
