@@ -4,6 +4,7 @@ export default function Resume() {
       {/* Resume Section */}
       <div className="mx-auto w-4/5">
         <div className="grid grid-cols-3 mt-10 bg-[#222634]/75">
+        {/* Left Column */}
           <div className="border-solid border-2 border-white-600 rounded-lg p-2">
           <h2>Education</h2>
           <h3>February, 2023 - August, 2023</h3>
@@ -14,8 +15,11 @@ export default function Resume() {
             <h3>University of Central Florida</h3>
             <p className="text-white">BSBA Integrated Business</p>
           <h2>Key Skills</h2>
-          <p className="text-white">HTML, CSS, JavaScript, *React, MongoDb, MySQL, Express, Node Bootstrap, Tailwind UI/UX design, photoshop</p>
+          <p className="text-white">HTML, CSS, JavaScript, *React, MongoDb, MySQL, Express, Node Bootstrap, Tailwind UI/UX design, photoshop, Agile Development</p>
+          <h2>Soft Skills</h2>
+          <p className="text-white">Team leadership, Clear Communication, Collaboration, Adaptability and Flexibility, Accepts Critical Feedback</p>
           </div>
+          {/* Right column */}
           <div className="border-solid border-2 border-white-600 rounded-lg p-2 col-span-2">
             <h2>Objective</h2>
             <p className="text-white">Seeking an opportunity to join a great team and add value while working on exciting new projects that will expand my knowledge and abilities as a full-stack developer. </p>
