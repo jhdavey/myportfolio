@@ -31,7 +31,7 @@ export default function Portfolio() {
       <section className='container mx-auto'>
         <h1 className='text-5xl text-white flex justify-center font-nunito'>My Portfolio</h1>
         <h2 className='text-lg text-gray-200 flex justify-center m-6 font-nunito'>Welcome to my portfolio page!</h2>
-        <section className='grid grid-cols-3 gap-5'>
+        <section className='grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 '>
         {projectData && projectData.map((project, index) => (
           <article key={index} className='relative rounded-lg shadow-xl bg-gray-800 bg-opacity-80 p-8'>
             <h3 className='text-white text-3xl font-bold font-nunito mb-2 hover:text-red-700'>
