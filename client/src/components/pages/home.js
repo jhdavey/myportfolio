@@ -3,7 +3,7 @@ import expressLogo from '../../assets/expressjs_logo.png';
 
 export default function Home() {
   return (
-    <main className='mt-3'>
+    <main className='mt-5 sm:mt-2'>
       {/* Content section */}
       <section className='relative flex flex-col sm:h-screen justify-center items-center sm:mt-2'>
 
