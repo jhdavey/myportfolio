@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       {/* Content section */}
-      <section className='relative flex flex-col md:h-screen justify-center items-center sm:mt-2'>
+      <section className='relative flex flex-col h-screen justify-center items-center sm:mt-2'>
 
         {/* First row of section - image, intro, emoji */}  
         <div className='relative flex flex-col justify-center items-center'>
