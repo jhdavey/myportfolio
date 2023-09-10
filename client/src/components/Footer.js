@@ -2,6 +2,12 @@ import { SocialIcon } from "react-social-icons";
 
 export default function Footer() {
     return (
-        <p className="text-sky-50 text-lg italic text-center p-2 mt-10">Welcome to my portfolio!</p>
+        <div className="flex justify-center items-center p-2 mt-10">
+            <p className="text-sky-50 text-lg italic text-center m-3">Connect:</p>
+            <SocialIcon url="https://www.linkedin.com/in/joshua-davey-16265a241/" className="mr-4" target="_blank" fgColor="#fff" style={{ height: 25, width: 25 }} />
+            <SocialIcon url="https://www.github.com/jhdavey" className="mr-4" target="_blank" fgColor="#fff" style={{ height: 25, width: 25 }} />
+        </div>
+
+        
     )
 }

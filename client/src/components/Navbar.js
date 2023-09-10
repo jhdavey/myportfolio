@@ -49,12 +49,7 @@ export default function Example() {
                       >
                         {item.name}
                       </a>
-                    ))}
-                    {/*Desktop Social Links */}
-                    <div className="flex justify-center items-center">
-                      <SocialIcon url="https://www.linkedin.com/in/joshua-davey-16265a241/" className="mr-4" target="_blank" fgColor="#fff" style={{ height: 25, width: 25 }} />
-                      <SocialIcon url="https://www.github.com/jhdavey" className="mr-4" target="_blank" fgColor="#fff" style={{ height: 25, width: 25 }} />
-                    </div>
+                    ))}                   
                   </div>
                 </div>
               </div>
@@ -64,11 +59,6 @@ export default function Example() {
           {/* Mobile Dropdown menu */}
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {/* Mobile Social Icons */}
-              <div className="flex justify-center items-center px-2 py-2">
-                <SocialIcon url="https://www.linkedin.com/in/joshua-davey-16265a241/" className="justify-center" target="_blank" fgColor="#fff" style={{ height: 25, width: 25 }} />
-                <SocialIcon url="https://www.github.com/jhdavey" className="justify-center" target="_blank" fgColor="#fff" style={{ height: 25, width: 25 }} />
-              </div>
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
