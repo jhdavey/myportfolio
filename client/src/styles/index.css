@@ -32,11 +32,3 @@ h3 {
     margin-right: auto;
     border-radius: 5px;
 }
-
-/* Responsive layouts */
-/* Make intro header display as single center column with stacked elements*/
-/* @media screen and (max-width: 762px) {
-  .introemoji {
-    flex-direction: column;
-  }
-} */

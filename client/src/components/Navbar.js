@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuAlt3Icon, XIcon } from '@heroicons/react/outline';
+import { SocialIcon } from "react-social-icons";
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
@@ -49,22 +50,33 @@ export default function Example() {
                         {item.name}
                       </a>
                     ))}
+                    {/*Desktop Social Links */}
+                    <div className="flex justify-center items-center">
+                      <SocialIcon url="https://www.linkedin.com/in/joshua-davey-16265a241/" className="mr-4" target="_blank" fgColor="#fff" style={{ height: 25, width: 25 }} />
+                      <SocialIcon url="https://www.github.com/jhdavey" className="mr-4" target="_blank" fgColor="#fff" style={{ height: 25, width: 25 }} />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Mobile Dropdown menu */}
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
+              {/* Mobile Social Icons */}
+              <div className="flex justify-center items-center px-2 py-2">
+                <SocialIcon url="https://www.linkedin.com/in/joshua-davey-16265a241/" className="justify-center" target="_blank" fgColor="#fff" style={{ height: 25, width: 25 }} />
+                <SocialIcon url="https://www.github.com/jhdavey" className="justify-center" target="_blank" fgColor="#fff" style={{ height: 25, width: 25 }} />
+              </div>
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 font-medium'
+                    item.current ? 'bg-gray-700 text-white text-lg text-center' : 'text-gray-300 hover:bg-gray-500 hover:text-white text-lg text-center',
+                    'block rounded-md py-2 text-lg text-center'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >

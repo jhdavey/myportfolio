@@ -3,11 +3,10 @@ import expressLogo from '../../assets/expressjs_logo.png';
 
 export default function Home() {
   return (
-    <main className='h-screen'>
+    <main className='flex justify-center items-center'>
       {/* Content section */}
-      <section className='flex flex-col justify-center items-center mt-7 h-5/6'>
-
-        {/* First row of section - image, intro, emoji */}  
+      <section className='flex flex-col justify-center items-center mt-10 sm:mt-20'>
+        {/* First row of section - image, intro, emoji */} 
         <div className='relative flex flex-col justify-center items-center'>
           <img src={mypic} alt='giving speech at my wedding' className='w-28 h-28'/>
           <h1 className='text-center mt-2 mx-2 text-4xl md:text-6xl text-sky-50 font-nunito'>
