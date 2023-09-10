@@ -3,9 +3,9 @@ import expressLogo from '../../assets/expressjs_logo.png';
 
 export default function Home() {
   return (
-    <main>
+    <main className='h-screen'>
       {/* Content section */}
-      <section className='flex flex-col sm:h-screen justify-center items-center'>
+      <section className='flex flex-col justify-center items-center mt-7 h-5/6'>
 
         {/* First row of section - image, intro, emoji */}  
         <div className='relative flex flex-col justify-center items-center'>
