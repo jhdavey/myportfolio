@@ -25,7 +25,7 @@ export default function Resume() {
             <p className="text-white">Seeking an opportunity to join a great team and add value while working on exciting new projects that will expand my knowledge and abilities as a full-stack developer. </p>
             <h2>Experience</h2>
             <h3>June, 2018 - Present</h3>
-            <h3>CEO/CTO Quickease Mobile Car Wash</h3>
+            <h3>Founder/CTO Quickease Mobile Car Wash</h3>
             <ul className="text-white list-disc ml-5">
               <li>Identified a market need to help customers save time by providing mobile car cleaning services available to be booked online
               </li>
