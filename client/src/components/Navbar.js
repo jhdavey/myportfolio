@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { MenuAlt3Icon, XIcon } from '@heroicons/react/outline';
-import { SocialIcon } from "react-social-icons";
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
