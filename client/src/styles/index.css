@@ -8,6 +8,14 @@ background-image: url('../assets/portfolio_background.gif');
 background-size: cover;
 }
 
+h1 {
+  margin: 10px 0px 2px 0px;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: white;
+}
+
 h2 {
   margin: 10px 0px 2px 0px;
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
