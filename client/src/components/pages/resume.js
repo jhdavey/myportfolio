@@ -22,23 +22,24 @@ export default function Resume() {
           {/* Right column */}
           <div className="border-solid border-2 border-white-600 rounded-lg p-2 md:col-span-2">
             <h2>Objective</h2>
-            <p className="text-white">Seeking an opportunity to join a great team and add value while working on exciting new projects that will expand my knowledge and abilities as a full-stack developer. </p>
+            <p className="text-white">Seeking an opportunity to work with a great team and add value to exciting new projects that will expand my experience as a full-stack developer. </p>
             <h2>Experience</h2>
+            <h3>March, 2023 - June, 2023</h3>
+            <h3>Freelance Web Developer</h3>
+            <ul className="text-white list-disc ml-5">
+              <li> Developed a car wash chemical manufacturer’s website including general information pages, and ecommerce functionality.
+              </li>
+              <li>Website built in Wix, with Shiptheory API for automated label creation, and Stripe payments API integrated
+              </li> 
+            </ul>
+            <br />
+
             <h3>June, 2018 - Present</h3>
             <h3>Founder/CTO Quickease Mobile Car Wash</h3>
             <ul className="text-white list-disc ml-5">
               <li>Identified a market need to help customers save time by providing mobile car cleaning services available to be booked online
               </li>
               <li>Built an intuitively simple to navigate website with online booking that has become a big advantage for our company and generates an average of $40,000 per month in appointments booked.
-              </li> 
-            </ul>
-            <br />
-            <h3>March, 2023 - June, 2023</h3>
-            <h3>Web Developer</h3>
-            <ul className="text-white list-disc ml-5">
-              <li> Developed a car wash chemical manufacturer’s website including general information pages, and ecommerce functionality.
-              </li>
-              <li>Website built in Wix, with Shiptheory API for automated label creation, and Stripe payments API integrated
               </li> 
             </ul>
             <br />
