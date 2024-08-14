@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://www.jhdavey.github.io/myportfolio",
+  "homepage": "https://www.harleydavey.com",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.17",

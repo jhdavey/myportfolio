@@ -4,10 +4,10 @@ import { MenuAlt3Icon, XIcon } from '@heroicons/react/outline';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'About', href: '/about', current: false },
-  { name: 'Projects', href: '/portfolio', current: false },
-  { name: 'Resume', href: '/resume', current: false },
-  { name: 'Contact', href: '/contact', current: false },
+  { name: 'About', href: '#/about', current: false },
+  { name: 'Projects', href: '#/portfolio', current: false },
+  { name: 'Resume', href: '#/resume', current: false },
+  { name: 'Contact', href: '#/contact', current: false },
 ]
 
 function classNames(...classes) {
