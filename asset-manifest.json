@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1de7b0dd.css",
-    "main.js": "/portfolio/static/js/main.71eebf6f.js",
-    "static/js/726.17091ec5.chunk.js": "/portfolio/static/js/726.17091ec5.chunk.js",
-    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/portfolio_background.gif": "/portfolio/static/media/portfolio_background.5d850951310c0548bfcf.gif",
-    "static/media/wedding_Speech_strokedred.png": "/portfolio/static/media/wedding_Speech_strokedred.6ed5155de53e2a1b5607.png",
-    "static/media/expressjs_logo.png": "/portfolio/static/media/expressjs_logo.b85a04226f6b59992605.png",
-    "index.html": "/portfolio/index.html",
-    "main.1de7b0dd.css.map": "/portfolio/static/css/main.1de7b0dd.css.map",
-    "main.71eebf6f.js.map": "/portfolio/static/js/main.71eebf6f.js.map",
-    "726.17091ec5.chunk.js.map": "/portfolio/static/js/726.17091ec5.chunk.js.map",
-    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/portfolio/client/static/css/main.2f0671ac.css",
+    "main.js": "/portfolio/client/static/js/main.b4e0b80c.js",
+    "static/js/726.17091ec5.chunk.js": "/portfolio/client/static/js/726.17091ec5.chunk.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/client/static/js/787.1ed0c42c.chunk.js",
+    "static/media/portfolio_background.gif": "/portfolio/client/static/media/portfolio_background.5d850951310c0548bfcf.gif",
+    "static/media/wedding_Speech_strokedred.png": "/portfolio/client/static/media/wedding_Speech_strokedred.6ed5155de53e2a1b5607.png",
+    "static/media/expressjs_logo.png": "/portfolio/client/static/media/expressjs_logo.b85a04226f6b59992605.png",
+    "index.html": "/portfolio/client/index.html",
+    "main.2f0671ac.css.map": "/portfolio/client/static/css/main.2f0671ac.css.map",
+    "main.b4e0b80c.js.map": "/portfolio/client/static/js/main.b4e0b80c.js.map",
+    "726.17091ec5.chunk.js.map": "/portfolio/client/static/js/726.17091ec5.chunk.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/client/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1de7b0dd.css",
-    "static/js/main.71eebf6f.js"
+    "static/css/main.2f0671ac.css",
+    "static/js/main.b4e0b80c.js"
   ]
 }
