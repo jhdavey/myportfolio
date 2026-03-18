@@ -16,7 +16,9 @@ export default function Home() {
         </div>
 
         {/* Second row of section - title */}
-        <h2 className='text-center mx-2 text-4xl md:text-6xl text-sky-50 font-nunito mt-2'>Full-Stack Developer</h2>
+        <h2 className='text-center mx-2 text-3xl md:text-5xl text-sky-50 font-nunito mt-2'>
+          Full-Stack Developer / App Developer / AI Automations Expert
+        </h2>
 
         {/* Third row of section - techstack icons */}
         <div className='relative flex w-3/4 justify-center items-center'>
