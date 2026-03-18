@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.cf645a21.css",
-    "main.js": "/static/js/main.0e551ed7.js",
+    "main.js": "/static/js/main.35699c97.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/portfolio_background.gif": "/static/media/portfolio_background.5d850951310c0548bfcf.gif",
     "static/media/wedding_Speech_strokedred.png": "/static/media/wedding_Speech_strokedred.6ed5155de53e2a1b5607.png",
     "static/media/expressjs_logo.png": "/static/media/expressjs_logo.b85a04226f6b59992605.png",
     "index.html": "/index.html",
     "main.cf645a21.css.map": "/static/css/main.cf645a21.css.map",
-    "main.0e551ed7.js.map": "/static/js/main.0e551ed7.js.map",
+    "main.35699c97.js.map": "/static/js/main.35699c97.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf645a21.css",
-    "static/js/main.0e551ed7.js"
+    "static/js/main.35699c97.js"
   ]
 }
