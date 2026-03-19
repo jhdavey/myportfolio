@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.cf645a21.css",
-    "main.js": "/static/js/main.db17cabc.js",
+    "main.css": "/static/css/main.0a98f5be.css",
+    "main.js": "/static/js/main.228bfd0a.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
-    "static/media/portfolio_background.gif": "/static/media/portfolio_background.5d850951310c0548bfcf.gif",
+    "static/media/jsg.png": "/static/media/jsg.1ae78855a1e5eb30f469.png",
+    "static/media/portfolio_screenshot.png": "/static/media/portfolio_screenshot.292a080d730d38a25d88.png",
     "static/media/wedding_Speech_strokedred.png": "/static/media/wedding_Speech_strokedred.6ed5155de53e2a1b5607.png",
-    "static/media/expressjs_logo.png": "/static/media/expressjs_logo.b85a04226f6b59992605.png",
+    "static/media/notetaker.png": "/static/media/notetaker.efadf012cef30c76e058.png",
     "index.html": "/index.html",
-    "main.cf645a21.css.map": "/static/css/main.cf645a21.css.map",
-    "main.db17cabc.js.map": "/static/js/main.db17cabc.js.map",
+    "main.0a98f5be.css.map": "/static/css/main.0a98f5be.css.map",
+    "main.228bfd0a.js.map": "/static/js/main.228bfd0a.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf645a21.css",
-    "static/js/main.db17cabc.js"
+    "static/css/main.0a98f5be.css",
+    "static/js/main.228bfd0a.js"
   ]
 }
