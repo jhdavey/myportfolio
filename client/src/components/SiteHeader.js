@@ -39,15 +39,6 @@ export default function SiteHeader() {
         >
           <MenuIcon />
         </button>
-
-        <nav className='desktop-nav' aria-label='Primary'>
-          <NavLink
-            to='/contact'
-            className={({ isActive }) => (isActive ? 'top-nav-button active' : 'top-nav-button')}
-          >
-            Contact
-          </NavLink>
-        </nav>
       </div>
 
       <nav className={isOpen ? 'mobile-nav open' : 'mobile-nav'} aria-label='Mobile primary'>

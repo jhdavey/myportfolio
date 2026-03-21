@@ -27,6 +27,13 @@ const recentWork = [
 ];
 
 const featuredCaseStudies = popularUseCases.slice(0, 4);
+const heroNavItems = [
+  { label: 'Overview', path: '/' },
+  { label: 'Services', path: '/services' },
+  { label: 'My Work', path: '/work' },
+  { label: 'My Process', path: '/process' },
+  { label: 'Contact', path: '/contact' },
+];
 
 function LocationIcon() {
   return (
@@ -55,6 +62,13 @@ export default function HomePage() {
   return (
     <section className='page home-page'>
       <section className='home-hero-full'>
+        <nav className='hero-overlay-nav fade-up' aria-label='Hero navigation'>
+          {heroNavItems.map((item) => (
+            <Link className='hero-overlay-link' key={item.path} to={item.path}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
         <WorldMapOutline />
         <div className='home-hero-content fade-up'>
           <p className='hero-role'>AI Systems Engineer</p>
