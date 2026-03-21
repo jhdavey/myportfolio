@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ReactComponent as WorldMapOutline } from '../assets/world-outline.svg';
 import projectOneImage from '../assets/notetaker.png';
 import projectTwoImage from '../assets/portfolio_screenshot.png';
 import projectThreeImage from '../assets/jsg.png';
@@ -27,13 +28,6 @@ const recentWork = [
 ];
 
 const featuredCaseStudies = popularUseCases.slice(0, 4);
-const heroNavItems = [
-  { label: 'Overview', path: '/' },
-  { label: 'Services', path: '/services' },
-  { label: 'My Work', path: '/work' },
-  { label: 'My Process', path: '/process' },
-  { label: 'Contact', path: '/contact' },
-];
 
 function LocationIcon() {
   return (
@@ -44,32 +38,11 @@ function LocationIcon() {
   );
 }
 
-function WorldMapOutline() {
-  return (
-    <svg viewBox='0 0 1200 520' aria-hidden='true' className='hero-world-map'>
-      <path d='M102 186l42-26 58 8 40-12 44 18 8 34-30 28-54 12-38 28-44-10-30-30z' />
-      <path d='M334 128l66-18 72 16 24 36-10 34 44 42-18 44-54 14-60-16-44-44-26-52z' />
-      <path d='M520 138l82-20 92 10 70 36 10 36-52 30-66 4-40 32-76-16-24-42z' />
-      <path d='M620 290l66-8 52 18 26 38-24 52-74 16-62-36-18-42z' />
-      <path d='M812 180l88-20 124 28 54 34-16 38-92 18-58 22-82-30-30-44z' />
-      <path d='M926 332l64-18 50 20 14 44-42 24-68-20-24-34z' />
-      <path d='M1088 352l40 12 18 28-32 20-26-8-8-22z' />
-    </svg>
-  );
-}
-
 export default function HomePage() {
   return (
     <section className='page home-page'>
       <section className='home-hero-full'>
-        <nav className='hero-overlay-nav fade-up' aria-label='Hero navigation'>
-          {heroNavItems.map((item) => (
-            <Link className='hero-overlay-link' key={item.path} to={item.path}>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        <WorldMapOutline />
+        <WorldMapOutline className='hero-world-map' aria-hidden='true' />
         <div className='home-hero-content fade-up'>
           <p className='hero-role'>AI Systems Engineer</p>
           <h1 className='hero-name'>Harley Davey</h1>

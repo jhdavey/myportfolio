@@ -4,9 +4,8 @@ import { NavLink, useLocation } from 'react-router-dom';
 const navItems = [
   { label: 'Overview', path: '/' },
   { label: 'Services', path: '/services' },
-  { label: 'Case Studies', path: '/use-cases' },
-  { label: 'Work', path: '/work' },
-  { label: 'Process', path: '/process' },
+  { label: 'My Work', path: '/work' },
+  { label: 'My Process', path: '/process' },
   { label: 'Contact', path: '/contact' },
 ];
 
@@ -30,6 +29,19 @@ export default function SiteHeader() {
   return (
     <header className='site-header'>
       <div className='header-inner'>
+        <nav className='desktop-nav site-floating-nav' aria-label='Primary'>
+          {navItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) => (isActive ? 'hero-overlay-link active' : 'hero-overlay-link')}
+              end={item.path === '/'}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+
         <button
           className='menu-toggle'
           type='button'
