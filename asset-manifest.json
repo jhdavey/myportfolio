@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.8f78551c.css",
-    "main.js": "/static/js/main.030312f3.js",
+    "main.css": "/static/css/main.ed6f6dff.css",
+    "main.js": "/static/js/main.01bec41d.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/jsg.png": "/static/media/jsg.1ae78855a1e5eb30f469.png",
     "static/media/wedding_Speech_strokedred.png": "/static/media/wedding_Speech_strokedred.280c6c59a6b23a40deef.png",
     "static/media/portfolio_screenshot.png": "/static/media/portfolio_screenshot.292a080d730d38a25d88.png",
     "static/media/notetaker.png": "/static/media/notetaker.efadf012cef30c76e058.png",
     "index.html": "/index.html",
-    "main.8f78551c.css.map": "/static/css/main.8f78551c.css.map",
-    "main.030312f3.js.map": "/static/js/main.030312f3.js.map",
+    "main.ed6f6dff.css.map": "/static/css/main.ed6f6dff.css.map",
+    "main.01bec41d.js.map": "/static/js/main.01bec41d.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f78551c.css",
-    "static/js/main.030312f3.js"
+    "static/css/main.ed6f6dff.css",
+    "static/js/main.01bec41d.js"
   ]
 }
