@@ -1,259 +1,121 @@
 import { Link } from 'react-router-dom';
-import headshot from '../assets/wedding_Speech_strokedred.png';
-import { popularUseCases, tooling } from '../data/siteContent';
+import projectOneImage from '../assets/notetaker.png';
+import projectTwoImage from '../assets/portfolio_screenshot.png';
+import projectThreeImage from '../assets/jsg.png';
+import { popularUseCases, processSteps, servicePillars } from '../data/siteContent';
 
-const heroPoints = [
-  'Work directly in your codebase and existing stack',
-  'Design for retrieval, tool use, approvals, and failure handling',
-  'Ship systems your team can actually operate after handoff',
-];
-
-const heroPills = ['OpenAI + Claude', 'Tool orchestration', 'Tracing + evals', 'Human review paths'];
-
-const consoleStages = [
+const recentWork = [
   {
-    label: 'Signals',
-    items: ['Forms, chat, email', 'CRM and ticket events', 'Internal requests'],
+    title: 'Service Operations Automation',
+    summary:
+      'Built an end-to-end intake and follow-up workflow that connected inbound requests directly to service operations.',
+    impact: 'Less manual triage and faster client response cycles.',
+    image: projectOneImage,
   },
   {
-    label: 'Reasoning',
-    items: ['Route by intent and risk', 'Retrieve context and permissions', 'Validate outputs before action'],
+    title: 'Business Workflow Modernization',
+    summary: 'Unified disconnected tools into one operational system with role-based automation and smarter alerts.',
+    impact: 'Better team visibility and fewer handoff failures.',
+    image: projectTwoImage,
   },
   {
-    label: 'Actions',
-    items: ['Draft or complete work', 'Update systems and notify people', 'Escalate exceptions with full trace'],
-  },
-];
-
-const deliverySignals = [
-  {
-    title: 'Systems Before Prompts',
-    detail:
-      'The model is one layer in the system, not the whole system. Good delivery starts with workflow design, constraints, and context shape.',
-  },
-  {
-    title: 'Model-Agnostic Execution',
-    detail:
-      'I design around tasks and tradeoffs, choosing the right model behavior for cost, latency, reasoning depth, and reliability.',
-  },
-  {
-    title: 'Operational Safety',
-    detail:
-      'Structured outputs, tool permissions, approval steps, and fallback routes keep the automation usable when the edge cases arrive.',
-  },
-  {
-    title: 'Measured Improvement',
-    detail:
-      'Tracing, evals, and feedback loops make the system easier to improve after launch instead of letting quality drift in production.',
+    title: 'AI-Enhanced Customer Experience',
+    summary: 'Implemented guided AI-assisted flows that reduced friction from first touch through action.',
+    impact: 'A clearer customer journey with faster decision support.',
+    image: projectThreeImage,
   },
 ];
 
-const systemLayers = [
-  {
-    title: 'Agent Workflows',
-    detail:
-      'Multi-step systems that interpret requests, gather context, call tools, and move work forward without losing human visibility.',
-  },
-  {
-    title: 'Knowledge Systems',
-    detail:
-      'Permission-aware retrieval over SOPs, docs, tickets, and internal data so answers stay grounded in your actual business context.',
-  },
-  {
-    title: 'Internal Copilots',
-    detail:
-      'Role-specific assistants for support, sales, operations, and engineering that reduce repetitive work without creating chaos.',
-  },
-  {
-    title: 'Embedded AI Features',
-    detail:
-      'Customer-facing AI experiences integrated into product workflows, not bolted on as a disconnected chat widget.',
-  },
-];
+const featuredCaseStudies = popularUseCases.slice(0, 4);
 
-const operatingPrinciples = [
-  {
-    step: '01',
-    title: 'Constrain the Interface',
-    detail: 'Schemas, clear tools, and explicit success conditions reduce drift before it becomes a production problem.',
-  },
-  {
-    step: '02',
-    title: 'Observe the System',
-    detail: 'Requests, tool calls, traces, and review data make it obvious where quality breaks and what to improve next.',
-  },
-  {
-    step: '03',
-    title: 'Route Risk Intentionally',
-    detail: 'Low-risk work can move automatically. High-risk work gets approvals, handoff, or tighter operating boundaries.',
-  },
-  {
-    step: '04',
-    title: 'Ship in Small Loops',
-    detail: 'The first version should solve a real workflow, create learning, and give the team a base to expand from.',
-  },
-];
+function LocationIcon() {
+  return (
+    <svg viewBox='0 0 24 24' aria-hidden='true' className='hero-location-icon'>
+      <path d='M12 22s7-6.4 7-12a7 7 0 10-14 0c0 5.6 7 12 7 12z' />
+      <circle cx='12' cy='10' r='2.5' />
+    </svg>
+  );
+}
 
-const fitChecklist = [
-  'More than one system or team is involved',
-  'Humans are repeating the same decisions or data movement',
-  'Accuracy and maintainability matter more than novelty',
-  'You need something deployable, testable, and expandable',
-];
-
-const featuredUseCases = [
-  'Customer Support Automation',
-  'Internal Knowledge Assistant',
-  'Document Processing Pipelines',
-  'Cross-System Workflow Orchestration',
-]
-  .map((title) => popularUseCases.find((useCase) => useCase.title === title))
-  .filter(Boolean);
+function WorldMapOutline() {
+  return (
+    <svg viewBox='0 0 1200 520' aria-hidden='true' className='hero-world-map'>
+      <path d='M102 186l42-26 58 8 40-12 44 18 8 34-30 28-54 12-38 28-44-10-30-30z' />
+      <path d='M334 128l66-18 72 16 24 36-10 34 44 42-18 44-54 14-60-16-44-44-26-52z' />
+      <path d='M520 138l82-20 92 10 70 36 10 36-52 30-66 4-40 32-76-16-24-42z' />
+      <path d='M620 290l66-8 52 18 26 38-24 52-74 16-62-36-18-42z' />
+      <path d='M812 180l88-20 124 28 54 34-16 38-92 18-58 22-82-30-30-44z' />
+      <path d='M926 332l64-18 50 20 14 44-42 24-68-20-24-34z' />
+      <path d='M1088 352l40 12 18 28-32 20-26-8-8-22z' />
+    </svg>
+  );
+}
 
 export default function HomePage() {
   return (
     <section className='page home-page'>
-      <section className='home-hero-shell'>
-        <article className='content-card fade-up home-command-card'>
-          <p className='eyebrow'>AI Systems Engineer</p>
-          <h1>Harley Davey</h1>
-          <p className='lead'>
-            I help teams move past prompt demos into production workflows that retrieve the right context, call
-            the right tools, respect approvals, and stay observable after launch.
+      <section className='home-hero-full'>
+        <WorldMapOutline />
+        <div className='home-hero-content fade-up'>
+          <p className='hero-role'>AI Systems Engineer</p>
+          <h1 className='hero-name'>Harley Davey</h1>
+          <p className='hero-location'>
+            <LocationIcon />
+            Orlando, FL
           </p>
-
-          <ul className='home-hero-points'>
-            {heroPoints.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
-
-          <div className='home-proof-pills' aria-label='AI delivery signals'>
-            {heroPills.map((pill) => (
-              <span className='home-proof-pill' key={pill}>
-                {pill}
-              </span>
-            ))}
-          </div>
-
-          <p className='home-intro-note'>
-            Best fit for ops-heavy teams, internal tools, customer workflows, and AI product features that need
-            engineering discipline instead of vague experimentation.
+          <p className='hero-description'>
+            I help teams modernize their systems and processes by integrating AI into real day-to-day workflows.
+            As a full stack developer, I know how to build and deliver complex systems that are practical,
+            reliable, and built to last.
           </p>
-
-          <div className='hero-actions'>
-            <Link className='button primary' to='/contact'>
-              Start a Conversation
-            </Link>
-            <Link className='button ghost' to='/work'>
-              See Work
-            </Link>
-          </div>
-        </article>
-
-        <aside className='content-card fade-up home-console-card' style={{ '--delay': '90ms' }}>
-          <div className='home-console-topbar'>
-            <span>AI delivery console</span>
-            <span className='console-status'>Production-minded</span>
-          </div>
-
-          <div className='home-console-query'>
-            <span className='console-label'>Current build pattern</span>
-            <p>
-              Route requests, retrieve the right context, take action through tools, and hand off edge cases
-              cleanly.
-            </p>
-          </div>
-
-          <div className='home-console-grid'>
-            {consoleStages.map((stage) => (
-              <section className='console-stage' key={stage.label}>
-                <p className='console-stage-title'>{stage.label}</p>
-                <ul className='console-list'>
-                  {stage.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </section>
-            ))}
-          </div>
-
-          <div className='home-console-rail'>
-            <span className='console-chip'>Structured outputs</span>
-            <span className='console-chip'>Tool permissions</span>
-            <span className='console-chip'>Fallback paths</span>
-            <span className='console-chip'>Trace reviews</span>
-          </div>
-
-          <div className='home-operator-card'>
-            <div className='portrait-wrap home-portrait-chip'>
-              <img src={headshot} alt='Harley Davey' />
-            </div>
-            <div>
-              <p className='operator-name'>Harley Davey</p>
-              <p className='operator-role'>Direct-to-engineer collaboration. US-based. Remote-friendly.</p>
-            </div>
-          </div>
-        </aside>
+        </div>
       </section>
 
-      <section className='home-signals-strip'>
-        {deliverySignals.map((signal, index) => (
-          <article className='home-signal-card fade-up' style={{ '--delay': `${120 + index * 60}ms` }} key={signal.title}>
-            <p className='section-kicker'>Signal {index + 1}</p>
-            <h2>{signal.title}</h2>
-            <p>{signal.detail}</p>
-          </article>
-        ))}
-      </section>
-
-      <section className='home-blueprint-row'>
-        <article className='content-card fade-up home-blueprint-panel'>
-          <p className='section-kicker'>What I Build</p>
-          <h2 className='section-title'>AI systems shaped around workflows, not just chat interfaces</h2>
-          <div className='home-blueprint-grid'>
-            {systemLayers.map((layer) => (
-              <article className='home-blueprint-card' key={layer.title}>
-                <h3>{layer.title}</h3>
-                <p>{layer.detail}</p>
-              </article>
-            ))}
-          </div>
-        </article>
-
-        <article className='content-card fade-up home-principles-panel' style={{ '--delay': '130ms' }}>
-          <p className='section-kicker'>How I Work</p>
-          <h2 className='section-title'>The engineering habits that keep AI projects from turning fragile</h2>
-          <div className='home-principle-list'>
-            {operatingPrinciples.map((principle) => (
-              <article className='home-principle-item' key={principle.step}>
-                <span>{principle.step}</span>
-                <div>
-                  <h3>{principle.title}</h3>
-                  <p>{principle.detail}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <Link className='text-link' to='/process'>
-            View delivery process
-          </Link>
-        </article>
-      </section>
-
-      <section className='home-use-cases'>
-        <header className='page-header fade-up' style={{ '--delay': '140ms' }}>
-          <p className='section-kicker'>Common Engagements</p>
-          <h2 className='section-title'>Where teams usually bring me in</h2>
-          <p className='lead'>
-            The strongest projects usually combine language understanding, system integration, and clear operating
-            constraints.
-          </p>
+      <section className='home-section home-services'>
+        <header className='page-header fade-up'>
+          <p className='section-kicker'>Services</p>
+          <h2 className='section-title'>What I can help your team build</h2>
         </header>
-        <div className='home-case-grid'>
-          {featuredUseCases.map((useCase, index) => (
-            <article className='card fade-up home-case-card' style={{ '--delay': `${180 + index * 60}ms` }} key={useCase.title}>
-              <div className='home-case-rank'>0{index + 1}</div>
+        <div className='home-services-grid'>
+          {servicePillars.map((service, index) => (
+            <article className='card fade-up home-service-card' style={{ '--delay': `${80 + index * 70}ms` }} key={service.name}>
+              <h3>{service.name}</h3>
+              <p>{service.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className='home-section home-recent-work'>
+        <header className='page-header fade-up'>
+          <p className='section-kicker'>Recent Work</p>
+          <h2 className='section-title'>Recent builds focused on speed, clarity, and real outcomes</h2>
+        </header>
+        <div className='home-recent-grid'>
+          {recentWork.map((item, index) => (
+            <article className='home-recent-card fade-up' style={{ '--delay': `${90 + index * 70}ms` }} key={item.title}>
+              <div className='home-recent-image-wrap'>
+                <img src={item.image} alt={item.title} className='home-recent-image' />
+              </div>
+              <div className='home-recent-content'>
+                <h3>{item.title}</h3>
+                <p>{item.summary}</p>
+                <p className='impact'>{item.impact}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className='home-section home-case-studies'>
+        <header className='page-header fade-up'>
+          <p className='section-kicker'>Case Studies</p>
+          <h2 className='section-title'>Common systems teams ask me to improve</h2>
+        </header>
+        <div className='home-case-study-grid'>
+          {featuredCaseStudies.map((useCase, index) => (
+            <article className='fade-up home-case-study-card' style={{ '--delay': `${110 + index * 60}ms` }} key={useCase.rank}>
+              <span className='home-case-study-rank'>0{index + 1}</span>
               <h3>{useCase.title}</h3>
               <p>{useCase.summary}</p>
               <p className='impact'>{useCase.value}</p>
@@ -262,35 +124,39 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className='home-stack-row'>
-        <article className='tooling-panel fade-up home-stack' style={{ '--delay': '120ms' }}>
-          <p className='section-kicker'>Current Build Surface</p>
-          <h2 className='section-title'>Tools, platforms, and patterns I use regularly</h2>
-          <div className='chip-grid'>
-            {tooling.map((item) => (
-              <span className='chip' key={item}>
-                {item}
-              </span>
-            ))}
-          </div>
-        </article>
+      <section className='home-section home-process'>
+        <header className='page-header fade-up'>
+          <p className='section-kicker'>My Process</p>
+          <h2 className='section-title'>A practical path from idea to production system</h2>
+        </header>
+        <div className='home-process-track'>
+          {processSteps.map((step, index) => (
+            <article className='home-process-node fade-up' style={{ '--delay': `${100 + index * 50}ms` }} key={step.step}>
+              <span>{step.step}</span>
+              <div>
+                <h3>{step.title}</h3>
+                <p>{step.detail}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-        <article className='cta-panel fade-up home-fit-card' style={{ '--delay': '170ms' }}>
-          <p className='section-kicker'>Project Fit</p>
-          <h2>If you send one broken workflow, I can map the agent loop.</h2>
-          <ul className='home-fit-list'>
-            {fitChecklist.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <p>
-            Send the workflow, the systems involved, what a person does today, and where mistakes become
-            expensive. I&apos;ll reply with likely architecture, key constraints, and a sensible first build.
-          </p>
-          <Link className='button primary compact' to='/contact'>
-            Reach Out
+      <section className='home-section home-contact fade-up'>
+        <p className='section-kicker'>Contact</p>
+        <h2>Planning an AI system for your team?</h2>
+        <p>
+          I can help you define the right starting point, design the architecture, and ship a solution your team
+          can actually run with.
+        </p>
+        <div className='home-contact-actions'>
+          <Link className='button primary' to='/contact'>
+            Start a Conversation
           </Link>
-        </article>
+          <Link className='button ghost' to='/work'>
+            View Work
+          </Link>
+        </div>
       </section>
     </section>
   );

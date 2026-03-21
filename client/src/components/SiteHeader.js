@@ -4,7 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 const navItems = [
   { label: 'Overview', path: '/' },
   { label: 'Services', path: '/services' },
-  { label: 'Use Cases', path: '/use-cases' },
+  { label: 'Case Studies', path: '/use-cases' },
   { label: 'Work', path: '/work' },
   { label: 'Process', path: '/process' },
   { label: 'Contact', path: '/contact' },
@@ -30,11 +30,6 @@ export default function SiteHeader() {
   return (
     <header className='site-header'>
       <div className='header-inner'>
-        <NavLink className='brand' to='/'>
-          <span className='brand-mark'>HD</span>
-          <span className='brand-text'>Harley Davey</span>
-        </NavLink>
-
         <button
           className='menu-toggle'
           type='button'
@@ -46,16 +41,12 @@ export default function SiteHeader() {
         </button>
 
         <nav className='desktop-nav' aria-label='Primary'>
-          {navItems.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
-              end={item.path === '/'}
-            >
-              {item.label}
-            </NavLink>
-          ))}
+          <NavLink
+            to='/contact'
+            className={({ isActive }) => (isActive ? 'top-nav-button active' : 'top-nav-button')}
+          >
+            Contact
+          </NavLink>
         </nav>
       </div>
 

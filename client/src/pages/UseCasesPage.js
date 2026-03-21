@@ -5,8 +5,8 @@ export default function UseCasesPage() {
   return (
     <section className='page use-cases-page'>
       <header className='page-header fade-up'>
-        <p className='eyebrow'>Use Cases</p>
-        <h1>The 10 most popular AI automation use cases right now.</h1>
+        <p className='eyebrow'>Case Studies</p>
+        <h1>Popular AI automation case studies teams are prioritizing right now.</h1>
         <p className='lead'>
           This list reflects where companies are deploying AI most actively in current enterprise surveys and
           delivery work.
