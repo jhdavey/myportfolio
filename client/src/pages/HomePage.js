@@ -198,6 +198,15 @@ export default function HomePage() {
         </header>
         <div className='home-about-grid'>
           <article className='card fade-up home-about-card'>
+            <h3>Outside of work</h3>
+            <img src={headshotImage} alt='Harley Davey' className='home-about-photo' />
+            <p>
+              I like to travel with my wife, build things, race cars, work out, and fish. Those parts of my life
+              keep me grounded and competitive, and they shape how I show up: disciplined, curious, and easy to
+              work with.
+            </p>
+          </article>
+          <article className='card fade-up home-about-card' style={{ '--delay': '90ms' }}>
             <h3>How I work with clients</h3>
             <p>
               I run projects with clear communication, honest timelines, and strong follow-through. Clients trust
@@ -207,15 +216,6 @@ export default function HomePage() {
             <p>
               You work directly with me from planning through launch, so decisions move quickly and accountability
               stays high.
-            </p>
-          </article>
-          <article className='card fade-up home-about-card' style={{ '--delay': '90ms' }}>
-            <h3>Outside of work</h3>
-            <img src={headshotImage} alt='Harley Davey' className='home-about-photo' />
-            <p>
-              I like to travel with my wife, build things, race cars, work out, and fish. Those parts of my life
-              keep me grounded and competitive, and they shape how I show up: disciplined, curious, and easy to
-              work with.
             </p>
           </article>
         </div>
