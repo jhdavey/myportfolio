@@ -28,6 +28,32 @@ const recentWork = [
 ];
 
 const featuredCaseStudies = popularUseCases.slice(0, 4);
+const cityPins = [
+  { name: 'Orlando', lon: -81.3792, lat: 28.5383, major: true },
+  { name: 'New Orleans', lon: -90.0715, lat: 29.9511 },
+  { name: 'Los Angeles', lon: -118.2437, lat: 34.0522 },
+  { name: 'Denver', lon: -104.9903, lat: 39.7392 },
+  { name: 'Dallas', lon: -96.797, lat: 32.7767 },
+  { name: 'New York', lon: -74.006, lat: 40.7128 },
+  { name: 'Chicago', lon: -87.6298, lat: 41.8781 },
+  { name: 'Toronto', lon: -79.3832, lat: 43.6532 },
+  { name: 'London', lon: -0.1276, lat: 51.5072 },
+  { name: 'Munich', lon: 11.582, lat: 48.1351 },
+  { name: 'Budapest', lon: 19.0402, lat: 47.4979 },
+  { name: 'Krakow', lon: 19.9445, lat: 50.0647 },
+  { name: 'Tokyo', lon: 139.6917, lat: 35.6895 },
+  { name: 'Kyoto-Osaka', lon: 135.5023, lat: 34.6937 },
+  { name: 'Brisbane', lon: 153.026, lat: -27.4705 },
+  { name: 'Melbourne', lon: 144.9631, lat: -37.8136 },
+  { name: 'Sydney', lon: 151.2093, lat: -33.8688 },
+];
+
+function projectToMap(lon, lat) {
+  return {
+    x: ((lon + 180) / 360) * 1200,
+    y: ((90 - lat) / 180) * 520,
+  };
+}
 
 function LocationIcon() {
   return (
@@ -42,10 +68,28 @@ export default function HomePage() {
   return (
     <section className='page home-page'>
       <section className='home-hero-full'>
-        <WorldMapOutline className='hero-world-map' aria-hidden='true' />
+        <h1 className='hero-name-corner fade-up'>Harley Davey</h1>
+        <div className='hero-world-layer' aria-hidden='true'>
+          <WorldMapOutline className='hero-world-map' />
+          <svg viewBox='0 0 1200 520' className='hero-map-pins'>
+            {cityPins.map((city) => {
+              const { x, y } = projectToMap(city.lon, city.lat);
+              const radius = city.major ? 4.8 : 2.6;
+
+              return (
+                <circle
+                  className={city.major ? 'hero-map-pin hero-map-pin-major' : 'hero-map-pin'}
+                  key={city.name}
+                  cx={x}
+                  cy={y}
+                  r={radius}
+                />
+              );
+            })}
+          </svg>
+        </div>
         <div className='home-hero-content fade-up'>
           <p className='hero-role'>AI Systems Engineer</p>
-          <h1 className='hero-name'>Harley Davey</h1>
           <p className='hero-location'>
             <LocationIcon />
             Orlando, FL
@@ -62,6 +106,11 @@ export default function HomePage() {
         <header className='page-header fade-up'>
           <p className='section-kicker'>Services</p>
           <h2 className='section-title'>What I can help your team build</h2>
+          <p className='lead'>
+            <strong>Where AI fits: Augment, Automate, and Assure</strong> - When designed properly, AI acts as a
+            force multiplier, augmenting workflows and automating administrative burden to accelerate
+            productivity.
+          </p>
         </header>
         <div className='home-services-grid'>
           {servicePillars.map((service, index) => (
