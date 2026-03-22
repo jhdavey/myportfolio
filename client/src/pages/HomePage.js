@@ -159,6 +159,10 @@ export default function HomePage() {
           <WorldMapOutline className='hero-world-map' />
           <svg viewBox='0 0 1200 520' className='hero-map-pins'>
             {cityPins.map((city) => {
+              if (city.name === 'Orlando') {
+                return null;
+              }
+
               const { x, y } = projectToMap(city.lon, city.lat);
               const radius = city.major ? 4.8 : 2.6;
 
