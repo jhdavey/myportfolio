@@ -116,6 +116,8 @@ const processSteps = [
   },
 ];
 
+const personalInterests = ['Travel with my wife', 'Building things', 'Racing cars', 'Working out', 'Fishing'];
+
 const cityPins = [
   { name: 'Orlando', lon: -81.3792, lat: 28.5383, major: true },
   { name: 'New Orleans', lon: -90.0715, lat: 29.9511 },
@@ -186,12 +188,45 @@ export default function HomePage() {
             Orlando, FL
           </p>
           <p className='hero-description'>
-            Hey, I&apos;m Harley. I like building things and traveling with my wife. Today, I focus on AI
-            projects, especially integrating AI into legacy systems to help teams improve margins and designing
-            new AI-first processes from scratch. With an AI systems engineering focus and a full-stack
-            development background, I deliver production-ready applications where AI is built into the core
-            workflow.
+            Hey, I&apos;m Harley. I help businesses modernize legacy systems with practical AI integrations and
+            automation. My focus is building workflows that improve margins, reduce manual overhead, and make
+            teams more effective. As an AI systems engineer with a full-stack background, I design and ship
+            production-ready solutions you can rely on.
           </p>
+        </div>
+      </section>
+
+      <section className='home-section home-about'>
+        <header className='page-header fade-up'>
+          <p className='section-kicker'>About Me</p>
+          <h2 className='section-title'>The person behind the engineering</h2>
+        </header>
+        <div className='home-about-grid'>
+          <article className='card fade-up home-about-card'>
+            <h3>How I work with clients</h3>
+            <p>
+              I run projects with clear communication, honest timelines, and strong follow-through. Clients trust
+              me because I stay practical, explain tradeoffs clearly, and focus on shipping systems that actually
+              improve day-to-day operations.
+            </p>
+            <p>
+              You work directly with me from planning through launch, so decisions move quickly and accountability
+              stays high.
+            </p>
+          </article>
+          <article className='card fade-up home-about-card' style={{ '--delay': '90ms' }}>
+            <h3>Outside of work</h3>
+            <p>
+              I like to travel with my wife, build things, race cars, work out, and fish. Those parts of my life
+              keep me grounded and competitive, and they shape how I show up: disciplined, curious, and easy to
+              work with.
+            </p>
+            <ul className='home-about-tags'>
+              {personalInterests.map((interest) => (
+                <li key={interest}>{interest}</li>
+              ))}
+            </ul>
+          </article>
         </div>
       </section>
 
