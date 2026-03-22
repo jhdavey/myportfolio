@@ -116,8 +116,6 @@ const processSteps = [
   },
 ];
 
-const personalInterests = ['Travel with my wife', 'Building things', 'Racing cars', 'Working out', 'Fishing'];
-
 const cityPins = [
   { name: 'Orlando', lon: -81.3792, lat: 28.5383, major: true },
   { name: 'New Orleans', lon: -90.0715, lat: 29.9511 },
@@ -219,11 +217,6 @@ export default function HomePage() {
               keep me grounded and competitive, and they shape how I show up: disciplined, curious, and easy to
               work with.
             </p>
-            <ul className='home-about-tags'>
-              {personalInterests.map((interest) => (
-                <li key={interest}>{interest}</li>
-              ))}
-            </ul>
           </article>
         </div>
       </section>
