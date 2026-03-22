@@ -266,18 +266,9 @@ a {
   left: min(2.4rem, 3vw);
   z-index: 2;
   display: inline-flex;
-  align-items: center;
-  gap: 0.82rem;
-}
-
-.hero-avatar {
-  width: clamp(2.6rem, 4.6vw, 3.6rem);
-  height: clamp(2.6rem, 4.6vw, 3.6rem);
-  border-radius: 999px;
-  object-fit: cover;
-  object-position: 52% 18%;
-  border: 1px solid rgba(242, 181, 69, 0.7);
-  box-shadow: 0 0 0 2px rgba(4, 16, 30, 0.55);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.18rem;
 }
 
 .hero-name-corner {
@@ -285,6 +276,15 @@ a {
   font-size: clamp(1.75rem, 4vw, 3rem);
   line-height: 1.05;
   color: #ffffff;
+}
+
+.hero-title-corner {
+  margin: 0;
+  font-size: clamp(0.98rem, 1.5vw, 1.2rem);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #f2b545;
 }
 
 .home-hero-full::before {
@@ -336,6 +336,18 @@ a {
   filter: drop-shadow(0 0 7px rgba(242, 181, 69, 0.92));
 }
 
+.hero-map-label path,
+.hero-map-label circle {
+  fill: #f2b545;
+}
+
+.hero-map-label text {
+  fill: #f2b545;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
 .hero-world-map,
 .hero-map-pins {
   pointer-events: none;
@@ -352,39 +364,11 @@ a {
   text-align: center;
 }
 
-.hero-role {
-  margin: 0;
-  font-size: clamp(1rem, 1.7vw, 1.35rem);
-  font-weight: 500;
-  color: #f2b545;
-}
-
 .hero-name {
   margin-top: 0.7rem;
   font-size: clamp(3.2rem, 8vw, 6.2rem);
   line-height: 1.03;
   color: #ffffff;
-}
-
-.hero-location {
-  margin: 1rem 0 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #d7e8f8;
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
-}
-
-.hero-location-icon {
-  width: 1.1rem;
-  height: 1.1rem;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 1.9;
-}
-
-.hero-location-icon circle {
-  fill: currentColor;
 }
 
 .hero-description {
@@ -415,6 +399,15 @@ a {
 
 .home-about-card h3 {
   font-size: 1.03rem;
+}
+
+.home-about-photo {
+  margin: 0.55rem 0 0.85rem;
+  width: min(100%, 320px);
+  border-radius: 1rem;
+  border: 1px solid rgba(242, 181, 69, 0.42);
+  box-shadow: var(--shadow-lg);
+  display: block;
 }
 
 .home-about-tags {
@@ -2070,16 +2063,15 @@ h1 {
   .hero-identity-corner {
     top: 1rem;
     left: 1rem;
-    gap: 0.6rem;
-  }
-
-  .hero-avatar {
-    width: 2.5rem;
-    height: 2.5rem;
+    gap: 0.12rem;
   }
 
   .hero-name-corner {
     font-size: clamp(1.5rem, 7vw, 2.15rem);
+  }
+
+  .hero-title-corner {
+    font-size: clamp(0.82rem, 3.3vw, 0.98rem);
   }
 
   .home-hero-full {

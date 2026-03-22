@@ -145,22 +145,15 @@ function projectToMap(lon, lat) {
   };
 }
 
-function LocationIcon() {
-  return (
-    <svg viewBox='0 0 24 24' aria-hidden='true' className='hero-location-icon'>
-      <path d='M12 22s7-6.4 7-12a7 7 0 10-14 0c0 5.6 7 12 7 12z' />
-      <circle cx='12' cy='10' r='2.5' />
-    </svg>
-  );
-}
-
 export default function HomePage() {
+  const orlandoPin = projectToMap(-81.3792, 28.5383);
+
   return (
     <section className='page home-page'>
       <section className='home-hero-full'>
         <div className='hero-identity-corner fade-up'>
-          <img src={headshotImage} alt='Harley Davey headshot' className='hero-avatar' />
           <h1 className='hero-name-corner'>Harley Davey</h1>
+          <p className='hero-title-corner'>AI Systems Engineer</p>
         </div>
         <div className='hero-world-layer' aria-hidden='true'>
           <WorldMapOutline className='hero-world-map' />
@@ -179,16 +172,16 @@ export default function HomePage() {
                 />
               );
             })}
+            <g className='hero-map-label' transform={`translate(${orlandoPin.x}, ${orlandoPin.y})`}>
+              <path d='M0 -17c-3.2 0-5.8 2.6-5.8 5.8 0 4.2 5.8 10.6 5.8 10.6s5.8-6.4 5.8-10.6C5.8-14.4 3.2-17 0-17z' />
+              <circle cx='0' cy='-11.2' r='2' />
+              <text x='10' y='-6'>Orlando</text>
+            </g>
           </svg>
         </div>
         <div className='home-hero-content fade-up'>
-          <p className='hero-role'>AI Systems Engineer</p>
-          <p className='hero-location'>
-            <LocationIcon />
-            Orlando, FL
-          </p>
           <p className='hero-description'>
-            Hey, I&apos;m Harley. I help businesses modernize legacy systems with practical AI integrations and
+            Hey, I&apos;m Harley! I help businesses modernize legacy systems with practical AI integrations and
             automation. My focus is building workflows that improve margins, reduce manual overhead, and make
             teams more effective. As an AI systems engineer with a full-stack background, I design and ship
             production-ready solutions you can rely on.
@@ -216,6 +209,7 @@ export default function HomePage() {
           </article>
           <article className='card fade-up home-about-card' style={{ '--delay': '90ms' }}>
             <h3>Outside of work</h3>
+            <img src={headshotImage} alt='Harley Davey' className='home-about-photo' />
             <p>
               I like to travel with my wife, build things, race cars, work out, and fish. Those parts of my life
               keep me grounded and competitive, and they shape how I show up: disciplined, curious, and easy to
