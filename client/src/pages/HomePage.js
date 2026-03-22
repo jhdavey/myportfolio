@@ -3,6 +3,7 @@ import { ReactComponent as WorldMapOutline } from '../assets/world-outline.svg';
 import projectOneImage from '../assets/notetaker.png';
 import projectTwoImage from '../assets/portfolio_screenshot.png';
 import projectThreeImage from '../assets/jsg.png';
+import headshotImage from '../assets/wedding_Speech_strokedred.png';
 
 const recentWork = [
   {
@@ -155,7 +156,10 @@ export default function HomePage() {
   return (
     <section className='page home-page'>
       <section className='home-hero-full'>
-        <h1 className='hero-name-corner fade-up'>Harley Davey</h1>
+        <div className='hero-identity-corner fade-up'>
+          <img src={headshotImage} alt='Harley Davey headshot' className='hero-avatar' />
+          <h1 className='hero-name-corner'>Harley Davey</h1>
+        </div>
         <div className='hero-world-layer' aria-hidden='true'>
           <WorldMapOutline className='hero-world-map' />
           <svg viewBox='0 0 1200 520' className='hero-map-pins'>
@@ -182,9 +186,11 @@ export default function HomePage() {
             Orlando, FL
           </p>
           <p className='hero-description'>
-            I help teams modernize their systems and processes by integrating AI into real day-to-day workflows.
-            As a full stack developer, I know how to build and deliver complex systems that are practical,
-            reliable, and built to last.
+            Hey, I&apos;m Harley. I like building things and traveling with my wife. Today, I focus on AI
+            projects, especially integrating AI into legacy systems to help teams improve margins and designing
+            new AI-first processes from scratch. With an AI systems engineering focus and a full-stack
+            development background, I deliver production-ready applications where AI is built into the core
+            workflow.
           </p>
         </div>
       </section>

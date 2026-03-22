@@ -260,11 +260,27 @@ a {
   gap: 0.72rem;
 }
 
-.hero-name-corner {
+.hero-identity-corner {
   position: absolute;
   top: 1.2rem;
   left: min(2.4rem, 3vw);
   z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.82rem;
+}
+
+.hero-avatar {
+  width: clamp(2.6rem, 4.6vw, 3.6rem);
+  height: clamp(2.6rem, 4.6vw, 3.6rem);
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: 52% 18%;
+  border: 1px solid rgba(242, 181, 69, 0.7);
+  box-shadow: 0 0 0 2px rgba(4, 16, 30, 0.55);
+}
+
+.hero-name-corner {
   margin: 0;
   font-size: clamp(1.75rem, 4vw, 3rem);
   line-height: 1.05;
@@ -2020,9 +2036,18 @@ h1 {
 
 @media (max-width: 700px) {
 
-  .hero-name-corner {
+  .hero-identity-corner {
     top: 1rem;
     left: 1rem;
+    gap: 0.6rem;
+  }
+
+  .hero-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .hero-name-corner {
     font-size: clamp(1.5rem, 7vw, 2.15rem);
   }
 
