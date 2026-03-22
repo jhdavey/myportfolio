@@ -297,7 +297,7 @@ a {
   width: min(115vw, 1680px);
   max-width: none;
   height: 100%;
-  top: 50%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: mapFloat 11s ease-in-out infinite;
@@ -2038,7 +2038,7 @@ h1 {
   .hero-world-layer {
     width: min(195vw, 1200px);
     height: 101%;
-    top: 53%;
+    top: 55%;
   }
 
   .hero-description {
