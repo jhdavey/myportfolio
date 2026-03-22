@@ -9,11 +9,20 @@ import UseCasesPage from './pages/UseCasesPage';
 import ContactPage from './pages/ContactPage';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    if (hash) {
+      const target = document.querySelector(hash);
+
+      if (target) {
+        target.scrollIntoView({ behavior: 'auto', block: 'start' });
+        return;
+      }
+    }
+
     window.scrollTo({ top: 0, behavior: 'auto' });
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 }

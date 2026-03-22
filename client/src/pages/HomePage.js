@@ -193,7 +193,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className='home-section home-about'>
+      <section className='home-section home-about' id='about'>
         <header className='page-header fade-up'>
           <p className='section-kicker'>About Me</p>
           <h2 className='section-title'>The person behind the engineering</h2>
