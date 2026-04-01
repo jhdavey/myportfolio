@@ -6,7 +6,6 @@ const initialFormData = {
   name: '',
   email: '',
   company: '',
-  projectType: '',
   details: '',
 };
 
@@ -24,7 +23,7 @@ export default function ContactPage() {
 
     const subject = encodeURIComponent(`New inquiry from ${formData.name || 'Website Visitor'}`);
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nProject Type: ${formData.projectType}\n\nProject Details:\n${formData.details}`
+      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nProject Details:\n${formData.details}`
     );
 
     window.location.assign(`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`);
@@ -35,11 +34,8 @@ export default function ContactPage() {
     <section className='page contact-page'>
       <header className='page-header fade-up'>
         <p className='eyebrow'>Contact</p>
-        <h1>Let&apos;s engineer your custom AI system.</h1>
-        <p className='lead'>
-          Share your workflows, stack, and goals. I&apos;ll review the technical requirements and respond with
-          clear next steps.
-        </p>
+        <h1>Tell me about your operation and where AI could help</h1>
+        <p className='lead'>Share the workflow, bottleneck, or missed opportunity you want to fix, and I&apos;ll help you think through the right path.</p>
       </header>
 
       <section className='split-section contact-layout'>
@@ -82,22 +78,12 @@ export default function ContactPage() {
             <label htmlFor='company'>Company</label>
             <input id='company' name='company' type='text' value={formData.company} onChange={handleChange} />
 
-            <label htmlFor='projectType'>Project Type</label>
-            <input
-              id='projectType'
-              name='projectType'
-              type='text'
-              placeholder='Automation, integration, assistant, etc.'
-              value={formData.projectType}
-              onChange={handleChange}
-            />
-
             <label htmlFor='details'>Project Details</label>
             <textarea
               id='details'
               name='details'
               rows='6'
-              placeholder='Describe the workflow, tools involved, and desired outcomes.'
+              placeholder='Describe the workflow, where the bottleneck is, what tools are involved, and what outcome you want to improve.'
               required
               value={formData.details}
               onChange={handleChange}

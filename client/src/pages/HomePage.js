@@ -1,118 +1,88 @@
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as WorldMapOutline } from '../assets/world-outline.svg';
-import projectOneImage from '../assets/notetaker.png';
-import projectTwoImage from '../assets/portfolio_screenshot.png';
-import projectThreeImage from '../assets/jsg.png';
-import headshotImage from '../assets/wedding_Speech_strokedred.png';
+import projectOneImage from '../assets/bean-img.png';
+import projectTwoImage from '../assets/wipedown-img.png';
+import projectThreeImage from '../assets/flight-tracker-img.png';
+import headshotPopout from '../assets/headshotpopout.png';
 
 const recentWork = [
   {
-    title: 'Client Intake and Delivery Automation',
+    title: 'AI-Driven Executive Assistant Platform',
     summary:
-      'Designed and implemented a full intake-to-delivery workflow that routed requests, generated tasks, and kept teams aligned without manual coordination.',
-    impact: 'Result: faster response times and a cleaner handoff from first contact to execution.',
+      'A custom planning, task, and coordination system designed to reduce admin drag, centralize decision-making, and keep high-volume personal operations moving.',
+    impact: 'Result: Replaced scattered manual follow-up with a more dependable day-to-day operating workflow.',
     image: projectOneImage,
   },
   {
-    title: 'Legacy Process Modernization',
+    title: 'Automated Mobile Service Operations Platform',
     summary:
-      'Replaced scattered spreadsheets and disconnected tools with one reliable operating layer across CRM, communication, and internal systems.',
-    impact: 'Result: better visibility, fewer dropped tasks, and stronger operational consistency.',
+      'A booking, dispatch, and operations platform built for a real-world service business that needed cleaner scheduling, tighter logistics, and scalable execution.',
+    impact: 'Result: Supported thousands of completed jobs per year, expansion into multiple cities, and a 4.9-star reputation across 500+ reviews.',
     image: projectTwoImage,
   },
   {
-    title: 'AI-Assisted Client Operations',
+    title: 'AI-Powered Monitoring and Alert Workflow',
     summary:
-      'Built role-specific AI workflows that supported service teams with decision prompts, drafting assistance, and next-step recommendations in real workflows.',
-    impact: 'Result: teams moved faster while maintaining quality and communication standards.',
+      'An automated agent that monitors changing data, analyzes trends, and reports only when action is worth taking, reducing the need for repeated manual checking.',
+    impact: 'Result: Turned repetitive monitoring into a reliable workflow and helped capture a $300 savings on one booking.',
     image: projectThreeImage,
   },
 ];
 
 const servicePillars = [
   {
-    name: 'AI Integration Strategy',
+    name: 'Operational AI Strategy',
     description:
-      'I assess your current systems, identify high-leverage opportunities, and design an AI roadmap that fits your real operations and constraints.',
+      'I start by understanding how your business actually runs, where revenue leaks, and where manual effort is slowing growth before recommending any technology.',
   },
   {
-    name: 'Automation Architecture and Build',
+    name: 'Consulting-Led Automation Builds',
     description:
-      'I build dependable automations that connect your tools, remove repetitive work, and reduce operational bottlenecks without creating fragile workflows.',
+      'I design and build custom automations around your real workflows so the system fits your operation instead of forcing your team into a generic template.',
   },
   {
-    name: 'Custom AI Workflow Engineering',
+    name: 'Custom AI Systems and Integrations',
     description:
-      'I create tailored assistants, copilots, and workflow logic for your team, with clear guardrails, human review points, and production-ready behavior.',
+      'I connect CRMs, internal tools, inboxes, scheduling flows, and AI agents into one dependable operating system with guardrails and production reliability in mind.',
   },
   {
-    name: 'Optimization and Advisory',
+    name: 'Continuous Optimization',
     description:
-      'As a solo consultant-engineer, I stay close to outcomes, iterate quickly, and help your team adopt AI with confidence, professionalism, and trust.',
-  },
-];
-
-const featuredCaseStudies = [
-  {
-    rank: 1,
-    title: 'Client Onboarding and Intake Systems',
-    summary:
-      'Automated qualification, follow-up, and task creation across forms, inboxes, and internal tools so nothing is lost in handoff.',
-    value: 'Improved speed-to-service and reduced manual coordination.',
-  },
-  {
-    rank: 2,
-    title: 'Cross-Tool Operations Sync',
-    summary:
-      'Connected CRM, communication, and project platforms into one dependable workflow layer with clear routing and escalation logic.',
-    value: 'Created operational clarity for both leadership and frontline teams.',
-  },
-  {
-    rank: 3,
-    title: 'AI Support for Service Teams',
-    summary:
-      'Implemented AI-assisted drafting, triage support, and context retrieval to help teams respond faster while maintaining quality.',
-    value: 'Raised output quality and consistency without expanding headcount.',
-  },
-  {
-    rank: 4,
-    title: 'Knowledge and SOP Enablement',
-    summary:
-      'Turned fragmented process knowledge into usable, searchable, AI-enabled workflows tied directly to day-to-day execution.',
-    value: 'Reduced dependency on tribal knowledge and improved onboarding velocity.',
+      'I stay involved after launch to improve performance, expand use cases, and keep the automation aligned with the way your business evolves.',
   },
 ];
 
 const processSteps = [
   {
     step: '01',
-    title: 'Business Discovery',
+    title: 'Operational Discovery',
     detail:
-      'I learn how your team actually works today, where friction lives, and what outcomes matter most before suggesting technology.',
+      'I map how work moves through your business today, where bottlenecks live, and where missed revenue or wasted labor is showing up.',
   },
   {
     step: '02',
-    title: 'System Blueprint',
+    title: 'Solution Blueprint',
     detail:
-      'I define architecture, data flow, integration boundaries, and risk controls so implementation is clear, scoped, and practical.',
+      'I define the architecture, integrations, automation logic, and rollout plan so the build is grounded in business outcomes rather than hype.',
   },
   {
     step: '03',
     title: 'Build and Integrate',
     detail:
-      'I implement the solution end-to-end and connect it cleanly into your existing stack with reliability and maintainability in mind.',
+      'I implement the system end-to-end and connect it cleanly into your existing stack so it supports daily operations from the start.',
   },
   {
     step: '04',
-    title: 'Launch and Team Enablement',
+    title: 'Launch and Enablement',
     detail:
-      'I deploy with validation, documentation, and clear handoff so your team can operate confidently from day one.',
+      'I launch with validation, documentation, and practical handoff so your team can use the system without operational confusion.',
   },
   {
     step: '05',
     title: 'Refine and Expand',
     detail:
-      'I monitor performance, improve workflows, and help you scale additional AI automations as the business grows.',
+      'I monitor what is working, improve weak points, and expand into the next highest-value workflow once the first system is performing.',
   },
 ];
 
@@ -124,6 +94,7 @@ const cityPins = [
   { name: 'Dallas', lon: -96.797, lat: 32.7767 },
   { name: 'New York', lon: -74.006, lat: 40.7128 },
   { name: 'Chicago', lon: -87.6298, lat: 41.8781 },
+  { name: 'Grand Cayman Island', lon: -81.3674, lat: 19.3133 },
   { name: 'Toronto', lon: -79.3832, lat: 43.6532 },
   { name: 'London', lon: -0.1276, lat: 51.5072 },
   { name: 'Munich', lon: 11.582, lat: 48.1351 },
@@ -144,94 +115,94 @@ function projectToMap(lon, lat) {
 }
 
 export default function HomePage() {
-  const orlandoPin = projectToMap(-81.3792, 28.5383);
+  const orlandoCity = useMemo(() => cityPins.find((city) => city.name === 'Orlando') ?? null, []);
+  const orlandoPin = useMemo(() => {
+    if (!orlandoCity) {
+      return null;
+    }
+    return projectToMap(orlandoCity.lon, orlandoCity.lat);
+  }, [orlandoCity]);
 
   return (
     <section className='page home-page'>
       <section className='home-hero-full'>
-        <div className='hero-identity-corner fade-up'>
-          <h1 className='hero-name-corner'>Harley Davey</h1>
-          <p className='hero-title-corner'>AI Systems Engineer</p>
-        </div>
         <div className='hero-world-layer' aria-hidden='true'>
           <WorldMapOutline className='hero-world-map' />
           <svg viewBox='0 0 1200 520' className='hero-map-pins'>
             {cityPins.map((city) => {
+              const { x, y } = projectToMap(city.lon, city.lat);
+              const radius = city.major ? 4.8 : 2.8;
+
               if (city.name === 'Orlando') {
-                return null;
+                return (
+                  <circle
+                    className='hero-map-home-pin'
+                    key={city.name}
+                    cx={x}
+                    cy={y}
+                    r={radius}
+                    aria-label='Orlando'
+                  />
+                );
               }
 
-              const { x, y } = projectToMap(city.lon, city.lat);
-              const radius = city.major ? 4.8 : 2.6;
+              const pinClass = city.major ? 'hero-map-pin hero-map-pin-major' : 'hero-map-pin';
 
               return (
                 <circle
-                  className={city.major ? 'hero-map-pin hero-map-pin-major' : 'hero-map-pin'}
+                  className={pinClass}
                   key={city.name}
                   cx={x}
                   cy={y}
                   r={radius}
+                  aria-hidden='true'
                 />
               );
             })}
-            <g className='hero-map-label' transform={`translate(${orlandoPin.x}, ${orlandoPin.y})`}>
-              <path d='M0 -17c-3.2 0-5.8 2.6-5.8 5.8 0 4.2 5.8 10.6 5.8 10.6s5.8-6.4 5.8-10.6C5.8-14.4 3.2-17 0-17z' />
-              <circle cx='0' cy='-11.2' r='2' />
-              <text x='10' y='-6'>Orlando</text>
-            </g>
+            {orlandoPin ? (
+              <g className='hero-map-home-label' transform={`translate(${orlandoPin.x}, ${orlandoPin.y})`}>
+                <text x='12' y='5'>Orlando</text>
+              </g>
+            ) : null}
           </svg>
         </div>
-        <div className='home-hero-content fade-up'>
-          <p className='hero-description'>
-            Hey, I&apos;m Harley! I help businesses modernize legacy systems with practical AI integrations and
-            automation. My focus is building workflows that improve margins, reduce manual overhead, and make
-            teams more effective. As an AI systems engineer with a full-stack background, I design and ship
-            production-ready solutions you can rely on.
-          </p>
+        <div className='home-hero-content'>
+          <div className='hero-intro-row'>
+            <figure className='hero-headshot-wrap fade-up'>
+              <img src={headshotPopout} alt='Harley Davey' className='hero-headshot-photo' />
+            </figure>
+            <div className='hero-heading-group fade-up' style={{ '--delay': '40ms' }}>
+              <span className='hero-greeting-row'>
+                <span className='hero-wave-emoji' aria-hidden='true'>👋</span>
+                <span className='hero-inline-name'>Hey, i&apos;m Harley!</span>
+              </span>
+              <span className='hero-emphasis hero-subheadline'>AI Automations Strategy &amp; Consulting</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className='home-section home-about' id='about'>
-        <header className='page-header fade-up'>
-          <p className='section-kicker'>About Me</p>
-          <h2 className='section-title'>The person behind the engineering</h2>
-        </header>
-        <div className='home-about-grid'>
-          <article className='card fade-up home-about-card'>
-            <h3>Outside of work</h3>
-            <img src={headshotImage} alt='Harley Davey' className='home-about-photo' />
-            <p>
-              I like to travel with my wife, build things, race cars, work out, and fish. Those parts of my life
-              keep me grounded and competitive, and they shape how I show up: disciplined, curious, and easy to
-              work with.
-            </p>
-          </article>
-          <article className='card fade-up home-about-card' style={{ '--delay': '90ms' }}>
-            <h3>How I work with clients</h3>
-            <p>
-              I run projects with clear communication, honest timelines, and strong follow-through. Clients trust
-              me because I stay practical, explain tradeoffs clearly, and focus on shipping systems that actually
-              improve day-to-day operations.
-            </p>
-            <p>
-              You work directly with me from planning through launch, so decisions move quickly and accountability
-              stays high.
-            </p>
-          </article>
-        </div>
+        <article className='card fade-up hero-about-copy' style={{ '--delay': '90ms' }}>
+          <header className='page-header'>
+            <p className='section-kicker'>About Me</p>
+            <h2 className='section-title'>Operator-minded engineer</h2>
+          </header>
+          <p>
+            With 10+ years of business experience across digital products and real-world service operations, I approach AI implementation from the standpoint of how a business performs day to day, not just what the technology can demo.
+          </p>
+          <p>
+            That means asking where time is being lost, where revenue slips through the cracks, and where manual processes are holding back the team. I prioritize clear communication, honest timelines, and systems that create measurable operational improvement.
+          </p>
+        </article>
       </section>
 
       <section className='home-section home-services'>
         <header className='page-header fade-up'>
           <p className='section-kicker'>Services</p>
-          <h2 className='section-title'>What I can help your team build</h2>
+          <h2 className='section-title'>Consulting-led AI automation for real operations</h2>
           <p className='lead'>
-            I help small and large businesses modernize existing systems with practical AI integrations and
-            automation engineering.
-          </p>
-          <p className='lead'>
-            You work directly with me from strategy through implementation. I bring a professional engineering
-            standard, clear communication, and a delivery style that is both approachable and accountable.
+            I help businesses modernize the workflows they already depend on, then build custom AI systems that improve responsiveness, reduce repetitive work, and make the operation easier to scale.
           </p>
         </header>
         <div className='home-services-grid'>
@@ -247,10 +218,9 @@ export default function HomePage() {
       <section className='home-section home-recent-work'>
         <header className='page-header fade-up'>
           <p className='section-kicker'>Recent Work</p>
-          <h2 className='section-title'>Recent builds focused on speed, clarity, and real outcomes</h2>
+          <h2 className='section-title'>Systems built around practical business outcomes</h2>
           <p className='lead'>
-            My work focuses on measurable operational improvements: less manual overhead, faster team execution,
-            and systems people can trust in production.
+            My work is centered on operational clarity: less manual overhead, stronger execution, and systems people can trust once they are live.
           </p>
         </header>
         <div className='home-recent-grid'>
@@ -269,34 +239,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className='home-section home-case-studies'>
-        <header className='page-header fade-up'>
-          <p className='section-kicker'>Case Studies</p>
-          <h2 className='section-title'>Common systems teams ask me to improve</h2>
-          <p className='lead'>
-            These are the areas where I most often help clients turn AI interest into real, maintainable business
-            systems.
-          </p>
-        </header>
-        <div className='home-case-study-grid'>
-          {featuredCaseStudies.map((useCase, index) => (
-            <article className='fade-up home-case-study-card' style={{ '--delay': `${110 + index * 60}ms` }} key={useCase.rank}>
-              <span className='home-case-study-rank'>0{index + 1}</span>
-              <h3>{useCase.title}</h3>
-              <p>{useCase.summary}</p>
-              <p className='impact'>{useCase.value}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className='home-section home-process'>
         <header className='page-header fade-up'>
           <p className='section-kicker'>My Process</p>
-          <h2 className='section-title'>A practical path from idea to production system</h2>
+          <h2 className='section-title'>A practical path from operations to automation</h2>
           <p className='lead'>
-            I run projects with a clear structure, technical rigor, and transparent communication so teams always
-            know what is happening and what comes next.
+            You work directly with me from discovery through launch, so decisions stay grounded, communication stays clear,
+            and accountability stays high.
           </p>
         </header>
         <div className='home-process-track'>
@@ -314,10 +263,9 @@ export default function HomePage() {
 
       <section className='home-section home-contact fade-up'>
         <p className='section-kicker'>Contact</p>
-        <h2>Planning an AI system for your team?</h2>
+        <h2>Need AI that improves operations, not just another tool?</h2>
         <p>
-          If you need a trusted solo specialist to modernize workflows, integrate AI into your existing stack, and
-          deliver systems your team can actually use, I can help.
+          If you need to modernize workflows, integrate AI into your current stack, and build systems that your team can actually rely on in day-to-day operations, I can help.
         </p>
         <div className='home-contact-actions'>
           <Link className='button primary' to='/contact'>
